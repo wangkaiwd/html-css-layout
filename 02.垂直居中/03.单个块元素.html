@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* display: table-cell;让标签元素以表格单元呈现，类似于td标签
+            设置float或position会对默认布局造成破坏
+         */
+         /* 适用于高度未知情况 */
+        #parent {
+            display: table-cell;
+            /* 表格内容垂直居中 */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="son">1</div>
+    </div>
+</body>
+</html>

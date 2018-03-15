@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 原理: text-align:只控制行内内容（文字，行内元素，行内块元素）如何相对于它的块父元素对齐 */
+
+        #parent {
+            text-align: center;
+            font-size: 0;
+        }
+        #parent div {
+            /* 元素设置行内块属性后，由于换行会导致之间有空隙 */
+            /* 解决方法：1.通过为父元素设置font-size:0,再为子元素单独设置字体大小 */
+            /*          2.可以在元素之间添加注释，给注释添加换行，保持代码的可读性 */
+            display: inline-block;
+            font-size: 14px;
+            /* float: left;  */
+            /* 元素设置float之后，只是具备了行内块的属性而已，并不是真正行内块 */
+        }
+
+        /* 总结：
+                1. text-align:center; 
+                2. margin: 0 auto; 必须指定宽度
+                3. 绝对定位
+                4. flex布局
+        */
+                
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

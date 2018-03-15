@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent {
+            /* 1.要知道父元素的高度，2.要知道页面呈现的行数，3.行高=父元素的高度/页面呈现的行数 */
+            /* 适用内容：多行文本，行内元素，行内块元素 */
+            height: 150px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+        <div class="son">4</div>
+        <div class="son">5</div>
+    </div>
+</body>
+</html>

@@ -7,6 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        #parent {
+            position: relative;
+            height: 150px;
+        }
+        #son {
+            /* 原理：top,bottom设为0时，margin-top&margin-bottom设置auto
+                的话会无限延伸，占满空间并且平分
+             */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            height: 50px;
+            background-color: red;
+            color: #fff;
+        }
+        /* 优点：简单，兼容好(ie8+) 
+           缺点：脱离标准文档流
+        */
     </style>
 </head>
 <body>

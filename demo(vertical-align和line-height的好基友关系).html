@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 文章链接 */
+        /* http://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/ */
+        /* 设置背景色后很容易会发现图片下会留有一段间隙 ：幽灵空白节点
+            这段空白间隙就是vertical-align和line-height携手搞得鬼
+
+            对于内联元素，vertical-align和line-height虽然看不见，但实际上到处都是
+        */
+
+        /* 解决方法：
+         */
+        .tp {
+            background-color: red;
+        }
+        .txt {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="tp">
+        <img src="http://image.zhangxinxu.com/image/blog/201508/fengong.jpg" alt=""><!-- 
+        --><span class="txt">123</span>
+    </div>
+</body>
+</html>

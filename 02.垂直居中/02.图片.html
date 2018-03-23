@@ -10,6 +10,10 @@
             height: 150px;
             line-height: 150px;
             /* font-size:0才可以完全居中 */
+            /* 消除幽灵空白节点：
+                幽灵空白节点是由于line-height和vertical-align的关系引起的
+             */
+             /* css行高具有继承性，可以干掉所有子元素的行高，可以让line-height不在干扰vertical-align */
             font-size: 0;
         }
         img {

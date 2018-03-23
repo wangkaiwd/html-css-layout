@@ -6,13 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        
+        /* 图片水平垂直居中 */
+        #parent {
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            /* 消除幽灵空白节点的bug */
+            font-size: 0; 
+        }
+
+        .son {
+            height: 50px;
+            width: auto;
+            /* 设置图片对齐方式为垂直居中 */
+            vertical-align: middle;
+        }
+
+        /* 行内元素和块级元素 */
+        .box {
+            height: 200px;
+            width: 200px;
+            /* 设置table-cell的元素宽高值设置百分比无效 
+                需要给父元素设置display:table才生效
+            */
+            /* width: 100%; */
+            /* 子元素作为表格单元显示 */
+            display: table-cell;
+            /* 表格单元垂直居中 */
+            vertical-align: middle;
+            text-align: center;
+        }
+        .sonbox {
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+        }
     
     </style>
 </head>
 <body>
     <div id="parent">
-        <div id="son">1</div>
+        <img class="son" src="http://image.zhangxinxu.com/image/blog/201508/fengong.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <div class="sonbox">
+            234
+        </div>
     </div>
 </body>
 </html>

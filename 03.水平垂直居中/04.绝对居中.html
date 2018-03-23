@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 原理：top,bottom设为0时，margin-top&bottom设置auto的话会无限延伸占满空间并且平分；
+            当left,right设为0时同理
+         */
+
+        /* 定位的其它居中方法：
+            使用margin:需要知道该元素的狂傲
+            使用transform:兼容行不好(ie9+),但是不需要知道该元素的宽高
+         */
+        .parent {
+            height: 200px;
+            background-color: pink;
+            position: relative;
+        }
+        .son {
+            position: absolute;
+            /* 各个方向设置距离为0 */
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            /* margin各个方向设为auto可以实现居中 */
+            margin: auto;
+            height: 50px;
+            width: 50px;
+            background-color: #fff;
+        }
+        /* 该方法可以实现水平垂直居中，并且不需要知道元素的宽高 */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="son">2432</div>
+    </div>
+</body>
+</html>

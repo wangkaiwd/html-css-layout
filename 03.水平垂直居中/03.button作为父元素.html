@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 原理：button的默认样式：
+            有outline和border
+            button自带text-align:center;将子元素改为行内或行内块元素生效
+         */
+         /* 该方法不实用 */
+        button#parent {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            width: 400px;
+            height: 200px;
+            border: 0;
+            outline: 0;
+        }
+
+        .son {
+            height: 50px;
+            background-color: pink;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="parent">
+        <div class="son">
+            2222
+        </div>
+    </button>
+</body>
+
+</html>

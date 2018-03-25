@@ -1,7 +1,4 @@
 ### BFC (Block Formatting Context):块级格式化上下文
-小知识：  
-1. 对于`position:absolute`,元素定位将相对于最近的一个以定位的父元素，如果没有的话<font color="red">相对于`body`</font>  
-
 块级格式化上下文：用于决定块盒子的布局及浮动相互影响的范围的一个区域  
 
 #### BFC的创建方法  

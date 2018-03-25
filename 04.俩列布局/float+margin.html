@@ -13,7 +13,9 @@
             background-color: pink;
         }
         .right {
-            margin-left: 100px;
+            /* 或者将margin-left:100px替换为overflow:hidden,触发BFC */
+            /* margin-left: 100px; */
+            overflow: hidden;
             height: 500px;
             background-color: #ccc;
         }

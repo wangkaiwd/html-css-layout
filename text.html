@@ -7,39 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #parent {
-            position: relative;
-        }
-
-        /*父相*/
-
         #left {
-            position: absolute;
-            /*子绝*/
-            top: 0;
-            left: 0;
-            background-color: #f00;
-            width: 100px;
+            overflow: hidden;
+            /*触发bfc*/
             height: 500px;
+            background-color: #f00;
         }
 
         #right {
-            position: absolute;
-            /*子绝*/
-            top: 0;
-            left: 100px;
-            /*值大于等于#left的宽度*/
-            right: 0;
-            background-color: #0f0;
+            margin-left: 10px;
+            /*margin需要定义在#right中*/
+            float: right;
+            width: 100px;
             height: 500px;
+            background-color: #0f0;
         }
     </style>
 </head>
 
 <body>
     <div id="parent">
-        <div id="left">左列定宽</div>
-        <div id="right">右列自适应</div>
+        <div id="left">左列自适应</div>
+        <div id="right">右列定宽</div>
     </div>
 </body>
 

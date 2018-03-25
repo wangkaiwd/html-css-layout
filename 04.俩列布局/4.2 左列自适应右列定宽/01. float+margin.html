@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 500px;
+            padding-left: 100px;
+            /* left距离box的左边距为100px，而且不会因为设置padding而撑开盒子 */
+            box-sizing: border-box;
+        }
+        .left {
+            float: left;
+            width: 100%;
+            height: 500px;
+            background-color: red;
+            margin-left:-100px;
+        }
+        .right {
+            float: right;
+            width: 100px;
+            height: 500px;
+            background-color: skyblue;
+        }
+
+        /* 原理：left和right都脱离标准文档流
+            left设置宽度100%进行自适应，但是是相对于父元素
+            通过父元素设置padding-left正直和margin-left负值为right空出位置
+         */
+    </style>
+</head>
+<body>
+    <!-- box为布局容器 -->
+    <div class="box">
+        <div class="left">左列自适应</div>
+        <div class="right">右列定宽</div>
+    </div>
+</body>
+</html>

@@ -1,35 +1,25 @@
+<!-- 以下为测试文件 -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #left {
-            overflow: hidden;
-            /*触发bfc*/
-            height: 500px;
-            background-color: #f00;
+        .bottom {
+            height: 50px;
+            background-color: skyblue;
         }
-
-        #right {
-            margin-left: 10px;
-            /*margin需要定义在#right中*/
-            float: right;
-            width: 100px;
-            height: 500px;
-            background-color: #0f0;
-        }
+    
     </style>
 </head>
-
 <body>
-    <div id="parent">
-        <div id="left">左列自适应</div>
-        <div id="right">右列定宽</div>
+    <div class="testbox">
+        <span>111111111</span><span>22222</span>
+        <div class="bottom">
+
+        </div>
     </div>
 </body>
-
 </html>

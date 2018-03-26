@@ -1,9 +1,9 @@
 ### css知识点记录  
 1. 对于`position:absolute`,元素定位将相对于最近的一个以定位的父元素，如果没有的话<font color="red">相对于`body`</font>   
 2. 行内块特征：  
-    1. 设置宽高无效
+    1. 设置高度无效，但可以通过`line-height`来设置父元素高度，使它居中
     2. <font color="red">**对`margin`仅设置左右方向有效，上下无效；`padding`设置上下左右都有效**</font>  
-    3. 不会自动进行换行  
+
 3. flex布局的知识导图：  
     ![flex](./assets/flex布局导图.png)  
     重点：  

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            display: flex;
+        }
+        .left {
+            /* 默认值 */
+            /* flex-grow: 0;存在剩余空间也不会放大 */
+            /* flex-shrink:1;剩余空间不足会缩小 */
+            /* flex-basis:auto; 在不伸缩的情况下容器的原始尺寸，默认auto，自己本身的大小 */
+            height: 500px;
+            background-color: pink;
+        }
+        .right {
+            flex: 1;
+            height: 500px;
+            background-color: skyblue;
+        }
+
+        /* 总结：
+            俩列布局：
+                1. 用的比较多：浮动
+                    a.把不是浮动的盒子触发BFC以达到自适应
+                    b.设置固定的margin或者padding结合盒模型box-sizing:border-box;改变盒子排布
+                2. 定位：设置好偏移量的值  
+                3. flex：注意兼容性
+                
+         */
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="left">左列不定宽</div>
+        <div class="right">右列自适应</div>
+    </div>
+</body>
+</html>

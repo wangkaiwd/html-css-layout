@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent {
+            min-width: 200px; /* 100+100 防止宽度不够，定宽的内容换行*/
+        }
+        .left {
+            float: left;
+            width: 100px;
+            height: 500px;
+            background-color: pink;
+        }
+        .center {
+            float: left;
+            width: 100px;
+            height: 500px;
+            background-color: orange;
+        }
+        .right {
+            /* 通过margin-left为浮动的元素空出地方，防止元素重叠 */
+            margin-left: 200px;
+            background-color: skyblue;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="left">左列定宽</div>
+        <div class="center">中间定宽</div>
+        <div class="right">右列自适应</div>
+    </div>
+</body>
+</html>

@@ -10,3 +10,6 @@
             2个值:  无单位：grow & shrink,有单位：grow & basis  
             3个值：grow & shrink & basis  
         4. `flex-basis`: 在不伸缩的情况下子容器的原始尺寸。主轴为横向时代表宽度，主轴为纵向时代表高度。
+4. 等分布局的实现思想  
+   ![等分布局](./assets/等分布局.png)  
+   ![等分布局公式转换](./assets/等分布局转换.png) 

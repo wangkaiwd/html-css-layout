@@ -6,39 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .box {
+        .parent {
             position: relative;
-            width: 100%;
+            min-width: 200px;
         }
         .left {
             position: absolute;
             left: 0;
             top: 0;
-            right: 100px;
-            width: 100%;
+            width: 100px;
             height: 500px;
-            background-color: red;
+            background-color: pink;
+        }
+        .center {
+            position: absolute;
+            left: 100px;
+            top: 0;
+            width: 100px;
+            height: 500px;
+            background-color: orange;
         }
         .right {
             position: absolute;
-            top: 0;
             right: 0;
-            width: 100px;
+            left: 200px;
+            top: 0;
             height: 500px;
             background-color: skyblue;
         }
-        /* 原理：
-            父元素相对定位，子元素绝对定位，然后通过设置 .right的宽度和定位的top:0,right:0
-            .left: left:0; right:100px(相对于父元素);top:0;实现
-            代码较多
-         */
     </style>
 </head>
 <body>
-    <!-- box为布局容器 -->
-    <div class="box">
-        <div class="left">左列自适应</div>
-        <div class="right">右列定宽</div>
+    <div class="parent">
+        <div class="left">左列定宽</div>
+        <div class="center">中间定宽</div>
+        <div class="right">右列自适应</div>
     </div>
 </body>
 </html>

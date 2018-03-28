@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .row {
+            display: flex;
+            height: 200px;
+            background-color: skyblue;
+            flex-wrap: wrap;
+            margin-left: -10px;
+        }
+        .col {
+            /* flex: 1;  既可以放大，又可以缩小，具有了伸缩性 */
+            flex-basis: 200px;
+            flex-shrink: 0;
+            background-color: pink;
+        }
+        /* 相邻兄弟元素选择器，相当与选择了.col之后的所有.col */
+        .col {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        /* 分析：只能在一行显示，如果要换行还能对齐的话，还得进行公式转换 
+            flex布局，子容器会撑开父容器，不能给父容器设置宽度
+        */
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            height: 500px;
+        }
+        .left {
+            flex-basis: 100px;
+            background-color: pink;
+        }    
+        .right {
+            flex-basis: 100px;
+            background-color: orange;
+        }
+        .center {
+            flex: 1;
+            background-color: skyblue;
+        }
+        /* 简单，兼容性不好，布局灵活 */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">左列定宽</div>
+        <div class="center">中间自适应</div>
+        <div class="right">右列定宽</div>
+    </div>
+</body>
+</html>

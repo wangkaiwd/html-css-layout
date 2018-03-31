@@ -7,22 +7,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        
+        #header,
+        #footer {
+            /* 不清除浮动的话，浮动盒子不占位置会造成影响 */
+            overflow: hidden;
+            height: 60px;
+            width: 100%;
+            background-color: #ccc;
+        }
+        /* 左边盒子覆盖到center的左边 */
+        .left {
+            float: left;
+            width: 100px;
+            height: 500px;
+            /* margin百分比，相当于父元素的宽度来计算 */
+            /* margin-left: -100%; */
+            background-color: pink;
+
+        }
+        /* 右边盒子覆盖的center的右边 */
+        .right {
+            float: left;
+            width: 200px;
+            height: 500px;
+            /* margin负边距，让该盒子覆盖到center的右边 */
+            /* margin-left: -200px; */
+            background-color: skyblue;
+        }
+        .center {
+            float: left;
+            width: 40%;
+            height: 500px;
+            background-color: yellow;
+        }
+        /* 通过margin为左右盒子空出地方,覆盖到center的中间 */
+        .center_inbox {
+            height: 480px;
+            border: 1px solid #000;
+            /* 通过margin和padding可以将内容撑开 */
+            margin: 0 220px 0 120px;
+        }
+
+        /* 
+        元素设置浮动，设置margin为负值
+            1.margin的方向与浮动方向相同
+                元素向右移动100px
+                .element {
+                    float: right;
+                    margin-right: -100px;
+                }
+            2.margin的方向与浮动方向相反
+                位于该元素左边的元素会向右移动100px，覆盖该元素
+                .element {
+                    float: right;
+                    margin-left: -100px;
+                }
+         */
     </style>
 </head>
 
 <body>
-    <div id="header">头部</div>
-    <div id="main">
-        <div class="center">
-            <div class="center_inbox">
-                中间自适应
+    <!-- 
+        双飞翼布局：
+            1.三列布局，中间宽度自适应，俩边定宽
+            2.中间栏要在浏览器中优先展示渲染
+     -->
+     <!-- 实现思路
+        关键点：浮动布局宽度不够的话，后边的元素会掉下去，但其实它们还是相邻元素
+        首先要三列布局,中间列在html中的位置要最前面,三栏分别要设置浮动
+        由于中间栏自适应,所以设置宽度100%,此时由于宽度不够，left和right盒子会进行换行
+        虽然换行了，左盒子的左边还是靠近中间盒子，所以设置
+        margin-left: -100%;相对于左盒子的左边框向左移动父盒子的宽度
+        此时右盒子的相邻元素变成了中间盒子，设置
+        margin-left: -200px;相对于自己的左边框向左移动200px
+        正好覆盖到了中间盒子的左边
+        然后通过margin撑开中间小盒子
+      -->
+     <div class="container">
+        <div id="header">头部</div>
+        <div id="main">
+            <div class="center">
+                <!-- <div class="center_inbox">
+                    中间自适应
+                </div> -->
             </div>
+            <div class="left">左列定宽</div>
+            <div class="right">右列定宽</div>
         </div>
-        <div class="left">左列定宽</div>
-        <div class="right">右列定宽</div>
-    </div>
-    <div id="footer">底部</div>
+        <div id="footer">底部</div>
+     </div>
 </body>
 
 </html>

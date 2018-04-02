@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .col {
+            float: left;
+            width: 25%;
+            height: 500px;
+            padding-left: 20px;
+            background-color: pink;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            /* 背景裁剪 */
+            /* MDN:设置元素的背景（背景图片或颜色）是否延伸到边框下面 */
+            /* 属性：border-box; padding-box; content-box; text */
+            /* 默认是border-box */
+            background-clip: content-box;
+        }
+        .box {
+            margin-left: -20px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* * {
+            box-sizing: border-box;
+        }
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 450px;
+            margin: 100px auto;
+            border: 1px solid yellow;
+        }
+        .row {
+            display: flex;
+            width: 100%;
+            height: 150px;
+        }
+        .col {
+            flex: 1;
+            background-color: pink;
+            text-align: center;
+            line-height: 150px;
+            border-right: 1px solid yellow;
+            border-top: 1px solid yellow;
+        } */
+
+        /* 优化代码 */
+        * {
+            box-sizing: border-box;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid yellow;
+        }
+        .row {
+            display: flex;
+            flex: 1;
+        }
+        .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            background-color: red;
+            border-right: 1px solid yellow;
+            border-top: 1px solid yellow;
+        }
+        /* 如何在不知道父元素高度的情况下让其中的文字水平垂直居中 */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+        </div>
+        <div class="row">
+            <div class="col">4</div>
+            <div class="col">5</div>
+            <div class="col">6</div>
+        </div>
+        <div class="row">
+            <div class="col">7</div>
+            <div class="col">8</div>
+            <div class="col">9</div>
+        </div>
+    </div>
+</body>
+</html>

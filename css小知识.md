@@ -1,5 +1,5 @@
 ### css知识点记录  
-1. 对于`position:absolute`,元素定位将相对于最近的一个以定位的父元素，如果没有的话<font color="red">相对于`body`</font>   
+1. 对于`position:absolute`,元素定位将相对于最近的一个已定位的父元素，如果没有的话<font color="red">相对于`body`</font>   
 2. flex布局的知识导图：  
     ![flex](./assets/flex布局导图.png)  
     重点：  
@@ -13,7 +13,7 @@
 3. 等分布局的实现思想  
    ![等分布局](./assets/等分布局.png)  
    ![等分布局公式转换](./assets/等分布局转换.png)  
-4. margin的零活运用  
+4. margin的零活运用（双飞翼布局）  
    1. margin百分比  
       规定基于父元素的宽度的百分比的外边距  
    2. margin负边距

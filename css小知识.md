@@ -16,5 +16,18 @@
 4. margin的零活运用（双飞翼布局）  
    1. margin百分比  
       规定基于父元素的宽度的百分比的外边距  
-   2. margin负边距
+   2. margin负边距  
+5. 设置初始化`ie`盒模型：`box-sizing:border-box`
+   ```css
+   html {
+       box-sizing: border-box;
+   }
+   *,
+   *:after,
+   *:before {
+       box-sizing: inherit;
+   }
+   ```
+   选择请*无法覆盖到伪元素，所以要给`:after`和`:before`分别设置，  
+   然后通过继承的方式应用到所有元素，方便为某个元素和其后代元素设置`box-sizing:content-box`
    

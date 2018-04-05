@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
         html,
         body,
-        #parent {
+        .box {
             height: 100%;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
-        #parent>div {
+        .box>div {
             border: 1px solid #000;
         }
-
-        #top {
+        .top {
             position: absolute;
-            top: 0;
             left: 0;
+            top: 0;
             right: 0;
             height: 100px;
         }
-
-        #left {
+        .left {
             position: absolute;
             top: 100px;
-            /*值大于等于#top的高度*/
             left: 0;
             bottom: 50px;
-            /*值大于等于#bottom的高度*/
+            float: left;
             width: 200px;
         }
-
-        #right {
+        .right {
             position: absolute;
-            overflow: auto;
             left: 200px;
-            /*值大于等于#left的宽度*/
             right: 0;
             top: 100px;
-            /*值大于等于#top的高度*/
             bottom: 50px;
-            /*值大于等于#bottom的高度*/
+            overflow: auto;
         }
-
-        #bottom {
+        .bottom {
             position: absolute;
             left: 0;
-            right: 0;
             bottom: 0;
+            right: 0;
             height: 50px;
         }
+        /* 如果没有定位的父元素，元素相对与浏览器进行定位 
+            通过定位的偏移量来进行宽度的设置
+            
+        */
     </style>
 </head>
-
 <body>
-    <div id="parent">
-        <div id="top">top</div>
-        <div id="left">left</div>
-        <div id="right">right</div>
-        <div id="bottom">bottom</div>
+    <div class="box">
+        <div class="top">顶部</div>
+        <div class="left">左侧</div>
+        <div class="right">右侧</div>
+        <div class="bottom">底部</div>
     </div>
 </body>
-
 </html>

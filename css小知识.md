@@ -1,5 +1,5 @@
 ### css知识点记录  
-1. 对于`position:absolute`,元素定位将相对于最近的一个已定位的父元素，如果没有的话<font color="red">相对于`body`</font>   
+1. 对于`position:absolute`,元素定位将相对于最近的一个已定位的父元素，如果没有的话<font color="red">相对于浏览器</font>   
 2. flex布局的知识导图：  
     ![flex](./assets/flex布局导图.png)  
     重点：  

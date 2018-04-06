@@ -1,6 +1,7 @@
 @import './setting.less';
 @import './common.less';
 .xiaomi {
+    min-width: @type-area; // 头部 start
     .header {
         width: 100%;
         height: @height-header;
@@ -8,13 +9,154 @@
         background-color: @bg-gray;
         .header-body {
             .w();
+            font-size: @ft-sm;
+            line-height: @height-header;
         }
         ul>li {
             float: left;
-            font-size: @ft-sm;
             color: @ft-header;
-            line-height: @height-header;
             margin-right: @mg-ml;
         }
-    }
+        .line {
+            color: @ft-line;
+            &:hover {
+                color: @ft-line;
+            }
+        }
+        a:hover {
+            color: @white;
+        }
+        .cart-box {
+            padding: 0 18px;
+            background-color: rgba(66, 66, 66, .8); // background-color: red;
+        }
+        .cart {
+            float: right;
+        }
+        .tool {
+            float: right;
+            li:last-child {
+                margin-right: @mg-normal;
+            }
+        }
+        .iconfont {
+            font-size: @ft-base;
+        }
+    } // 头部 end
+    // 顶部 start
+    .top {
+        .top-body {
+            position: relative;
+            .w();
+            height: 100px;
+        }
+        .top-logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0; // 当top&bottom都为0时，margin设为auto可以实现居中
+            // 如果是之前的话会通过margin负边距，或者transform来实现
+            margin: auto 0;
+            width: 56px;
+            height: 54px;
+        }
+        .top-nav {
+            padding: 0 388px 0 232px;
+            line-height: 100px;
+            font-size: @ft-base;
+            ul>li {
+                float: left;
+                padding: 0 @mg-sm;
+            }
+        }
+        .top-search-box {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            width: 295px;
+            height: 52px;
+        }
+        .search {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+        }
+        .search-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 52px;
+            background-color: @white;
+            border: 1px solid #ccc;
+        }
+        .tag1,
+        .tag2 {
+            position: absolute;
+            font-size: @ft-sm;
+            color: @ft-easy;
+            top: 0;
+            bottom: 0;
+            height: 20px;
+            padding: 4px;
+            margin: auto 0;
+            background: @bg-normal;
+            box-sizing: border-box;
+        }
+        .tag1 {
+            right: 132px;
+        }
+        .tag2 {
+            right: 62px;
+        }
+        .tag1:hover,
+        .tag2:hover {
+            color: @white;
+            background-color: @orange;
+            cursor: pointer;
+        }
+        .iconfont {
+            font-weight: bold;
+            color: @ft-line;
+            font-size: 20pxf;
+        }
+    } // 顶部 end
+    // 主体部分 start
+    .main {
+        width: 100%;
+        .slider {
+            position: relative;
+            .w();
+        }
+        .aside {
+            // float: left;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: @width-base;
+            height: @height-banner;
+            color: @white;
+            padding: 20px 0;
+            background-color: #606061;
+            ul>li {
+                cursor: pointer;
+                line-height: 42px;
+                padding: 0 30px;
+                &:hover {
+                    background-color: @orange;
+                }
+            }
+            span {
+                float: right;
+                font-size: @ft-base;
+            }
+        }
+        .banner {
+            width: 100%;
+            height: @height-banner;
+            background-color: pink;
+        }
+    } // 主体部分 end
 }

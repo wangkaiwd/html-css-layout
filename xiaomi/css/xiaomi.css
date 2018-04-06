@@ -1,3 +1,6 @@
+.xiaomi {
+  min-width: 1228px;
+}
 .xiaomi .header {
   width: 100%;
   height: 40px;
@@ -7,11 +10,148 @@
 .xiaomi .header .header-body {
   width: 1228px;
   margin: 0 auto;
+  font-size: 12px;
+  line-height: 40px;
 }
 .xiaomi .header ul > li {
   float: left;
-  font-size: 12px;
   color: #b0acac;
-  line-height: 40px;
   margin-right: 8px;
+}
+.xiaomi .header .line {
+  color: #424242;
+}
+.xiaomi .header .line:hover {
+  color: #424242;
+}
+.xiaomi .header a:hover {
+  color: #fff;
+}
+.xiaomi .header .cart-box {
+  padding: 0 18px;
+  background-color: rgba(66, 66, 66, 0.8);
+}
+.xiaomi .header .cart {
+  float: right;
+}
+.xiaomi .header .tool {
+  float: right;
+}
+.xiaomi .header .tool li:last-child {
+  margin-right: 24px;
+}
+.xiaomi .header .iconfont {
+  font-size: 14px;
+}
+.xiaomi .top .top-body {
+  position: relative;
+  width: 1228px;
+  margin: 0 auto;
+  height: 100px;
+}
+.xiaomi .top .top-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 56px;
+  height: 54px;
+}
+.xiaomi .top .top-nav {
+  padding: 0 388px 0 232px;
+  line-height: 100px;
+  font-size: 14px;
+}
+.xiaomi .top .top-nav ul > li {
+  float: left;
+  padding: 0 10px;
+}
+.xiaomi .top .top-search-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 295px;
+  height: 52px;
+}
+.xiaomi .top .search {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+.xiaomi .top .search-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 52px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.xiaomi .top .tag1,
+.xiaomi .top .tag2 {
+  position: absolute;
+  font-size: 12px;
+  color: #b0b0b0;
+  top: 0;
+  bottom: 0;
+  height: 20px;
+  padding: 4px;
+  margin: auto 0;
+  background: #f5f5f5;
+  box-sizing: border-box;
+}
+.xiaomi .top .tag1 {
+  right: 132px;
+}
+.xiaomi .top .tag2 {
+  right: 62px;
+}
+.xiaomi .top .tag1:hover,
+.xiaomi .top .tag2:hover {
+  color: #fff;
+  background-color: #fa6509;
+  cursor: pointer;
+}
+.xiaomi .top .iconfont {
+  font-weight: bold;
+  color: #424242;
+  font-size: 20pxf;
+}
+.xiaomi .main {
+  width: 100%;
+}
+.xiaomi .main .slider {
+  position: relative;
+  width: 1228px;
+  margin: 0 auto;
+}
+.xiaomi .main .aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 234px;
+  height: 460px;
+  color: #fff;
+  padding: 20px 0;
+  background-color: #606061;
+}
+.xiaomi .main .aside ul > li {
+  cursor: pointer;
+  line-height: 42px;
+  padding: 0 30px;
+}
+.xiaomi .main .aside ul > li:hover {
+  background-color: #fa6509;
+}
+.xiaomi .main .aside span {
+  float: right;
+  font-size: 14px;
+}
+.xiaomi .main .banner {
+  width: 100%;
+  height: 460px;
+  background-color: pink;
 }

@@ -110,6 +110,7 @@ audio:not([controls]) {
 }
 img {
   border-style: none;
+  vertical-align: top;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -279,6 +280,45 @@ img {
 .clearfix {
   zoom: 1;
 }
+.ell {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .pointer {
   cursor: pointer;
+}
+.right-bd:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 70px;
+  margin: auto 0;
+  background-color: #665e57;
+}
+.bottom-bd::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #665e57;
+}
+.title {
+  width: 1228px;
+  height: 38px;
+  font-size: 18px;
+  color: #424242;
+}
+.mt {
+  margin-top: 14px;
+}
+body {
+  height: 3000px;
 }

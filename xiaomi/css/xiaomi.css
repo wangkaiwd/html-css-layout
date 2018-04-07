@@ -155,3 +155,87 @@
   height: 460px;
   background-color: pink;
 }
+.xiaomi .main .slider-bottom {
+  margin-top: 14px;
+}
+.xiaomi .main .square {
+  float: left;
+  width: 234px;
+  height: 170px;
+  font-size: 12px;
+  color: #b0b0b0;
+  background-color: #5f5750;
+}
+.xiaomi .main .square .iconfont {
+  font-size: 25px;
+}
+.xiaomi .main .square ul {
+  height: 100%;
+}
+.xiaomi .main .square li {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  height: 50%;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.xiaomi .main .square li:hover {
+  color: #fff;
+}
+.xiaomi .main .square i,
+.xiaomi .main .square span {
+  display: block;
+  text-align: center;
+}
+.xiaomi .main .square span {
+  margin-top: 6px;
+}
+.xiaomi .main .slider-bottom-ad {
+  float: right;
+  font-size: 0;
+}
+.xiaomi .main .slider-bottom-ad img {
+  width: 316px;
+  height: 170px;
+  margin-right: 14px;
+}
+.xiaomi .main .slider-bottom-ad img:last-child {
+  margin-right: 0;
+}
+.xiaomi .main .flash-pay {
+  width: 1228px;
+  margin: 0 auto;
+  margin-top: 42px;
+}
+.xiaomi .main .flash-pay .flash-pay-body {
+  margin-left: -14px;
+}
+.xiaomi .main .flash-pay .flash-pay-body li {
+  float: left;
+  width: 234px;
+  height: 338px;
+  padding: 0 22px;
+  margin-left: 14px;
+  text-align: center;
+  background-color: #fafafa;
+}
+.xiaomi .main .flash-pay .flash-pay-body img {
+  width: 100%;
+  height: auto;
+}
+.xiaomi .main .flash-pay .flash-pay-body .flash-pay-body-title {
+  font-size: 14px;
+  color: #424242;
+}
+.xiaomi .main .flash-pay .flash-pay-body .flash-pay-body-content {
+  font-size: 13px;
+  color: #b0b0b0;
+}
+.xiaomi .main .flash-pay .flash-pay-body .flash-pay-body-price {
+  font-size: 14px;
+  color: #fa6509;
+}
+.xiaomi .main .flash-pay .flash-pay-body .del {
+  color: #b0b0b0;
+}

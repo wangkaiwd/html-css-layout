@@ -31,4 +31,24 @@
    选择请*无法覆盖到伪元素，所以要给`:after`和`:before`分别设置，  
    然后通过继承的方式应用到所有元素，方便为某个元素和其后代元素设置`box-sizing:content-box`
 6. `body`有默认`8px`的`margin`
-7. `transparent`：全透明黑色
+7. `transparent`：全透明黑色  
+8. `:not`选择器  
+   ![:not](./assets/not.png)  
+9. 宽高等比例缩放：  
+   ```html
+   <div class="box">
+        padding
+   </div>
+   ```
+   ```css
+   .box {
+        width: 20%;
+        background-color: pink;
+    }
+    .box::after {
+        content: '';
+        display: block;
+        /* 现在伪元素的父亲是box,高度应该和box的高度相等 */
+        padding-top: 100%;
+    }
+   ```

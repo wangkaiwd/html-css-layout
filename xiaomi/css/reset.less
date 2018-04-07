@@ -134,6 +134,7 @@ audio:not([controls]) {
 
 img {
     border-style: none;
+    vertical-align: top;
 }
 
 svg:not(:root) {
@@ -318,10 +319,12 @@ menu {
 ul li {
     list-style: none;
 }
+
 img {
     width: 100%;
     height: 100%;
 }
+
 // 版心
 // .w {
 //     width: @type-area;
@@ -339,15 +342,55 @@ img {
     zoom: 1;
 }
 
-
 // 单行超出显示...
-// .ell {
-//     white-space: nowrap;
-//     text-overflow: ellipsis;
-//     overflow: hidden;
-// }
-
+.ell {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 // 鼠标经过显示小手
 .pointer {
     cursor: pointer;
+}
+
+// 右边线
+.right-bd:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 70px;
+    margin: auto 0;
+    background-color: #665e57;
+}
+
+// 下边线
+.bottom-bd::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #665e57;
+}
+
+.title {
+    width: @type-area;
+    height: @height-title;
+    font-size: @ft-title;
+    color: @ft-line;
+}
+
+// 14px上间距
+.mt {
+    margin-top: @mg-base;
+}
+
+body {
+    height: 3000px;
 }

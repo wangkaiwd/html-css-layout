@@ -67,6 +67,9 @@
   float: left;
   padding: 0 10px;
 }
+.xiaomi .top .top-nav ul > li:hover {
+  color: #fa6509;
+}
 .xiaomi .top .top-search-box {
   position: absolute;
   right: 0;
@@ -229,10 +232,12 @@
   color: #424242;
 }
 .xiaomi .main .flash-pay .flash-pay-body .flash-pay-body-content {
+  margin-top: 12px;
   font-size: 13px;
   color: #b0b0b0;
 }
 .xiaomi .main .flash-pay .flash-pay-body .flash-pay-body-price {
+  margin-top: 20px;
   font-size: 14px;
   color: #fa6509;
 }

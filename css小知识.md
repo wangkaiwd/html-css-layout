@@ -51,4 +51,36 @@
         /* 现在伪元素的父亲是box,高度应该和box的高度相等 */
         padding-top: 100%;
     }
-   ```
+   ```  
+10. 消失边界线：  
+    效果图：  
+    ![边界消失](./assets/边界消失.png)  
+    ```html
+    <div class="ul-container">
+        <ul>
+            <li>测试</li>
+            <li>消失</li>
+            <li>边界线</li>
+            <li>右侧</li>
+            <li>边界线</li>
+            <li>消失</li>
+            <li>测试</li>
+        </ul>
+    </div>
+    ```
+    ```css
+    .ul-container {
+        overflow: hidden;
+    }
+    .ul-container, 
+    ul{
+        width:300px;
+        margin-left: -1px;
+    }
+    li{
+        float:left;
+        width:99px;
+        border-left:1px solid #999;
+    }
+    ```  
+    小技巧：<font color="red">父元素添加`overflow:hidden`，`li`添加反向边框，`ul`增加一个负的`margin`来实现</font>

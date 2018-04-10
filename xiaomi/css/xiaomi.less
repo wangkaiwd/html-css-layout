@@ -290,6 +290,9 @@
             .phone {
                 .w();
             }
+            .phone-body {
+                position: relative;
+            }
             .phone-body-left {
                 float: left;
                 width: @width-base;
@@ -299,7 +302,9 @@
                 // 通过触发BFC实现
                 // 左边浮动，宽度固定
                 // 右边自适应布局
-                overflow: hidden;
+                // overflow: hidden;
+                float: left;
+                width: 994px;
                 li {
                     float: left;
                     width: @width-base;
@@ -321,6 +326,11 @@
                     p {
                         padding: 0 20px;
                     }
+                    &:hover {
+                        transform: translateY(-2px);
+                        transition: all 1s linear;
+                        box-shadow: 4px 4px 4px 2px rgba(66, 66, 66, .3);
+                    }
                 }
                 .flash-pay-body-title {
                     font-size: @mg-base;
@@ -340,6 +350,11 @@
                     color: @ft-easy;
                 }
             }
+        }
+        .flash-pay-ad {
+            overflow: hidden;
+            height: 120px;
+            width: 100%;
         }
     } // 主体部分 end
 }

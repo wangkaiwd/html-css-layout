@@ -1,360 +1,381 @@
 @import './setting.less';
 @import './common.less';
 .xiaomi {
-    min-width: @type-area; // 头部 start
-    .header {
-        width: 100%;
-        height: @height-header;
-        color: @ft-header;
-        background-color: @bg-gray;
-        .header-body {
-            .w();
-            font-size: @ft-sm;
-            line-height: @height-header;
+  min-width: @type-area; // 头部 start
+  .header {
+    width: 100%;
+    height: @height-header;
+    color: @ft-header;
+    background-color: @bg-gray;
+    .header-body {
+      .w();
+      font-size: @ft-sm;
+      line-height: @height-header;
+    }
+    ul>li {
+      float: left;
+      color: @ft-header;
+      margin-right: @mg-ml;
+    }
+    .line {
+      color: @ft-line;
+      &:hover {
+        color: @ft-line;
+      }
+    }
+    a:hover {
+      color: @white;
+    }
+    .cart-box {
+      padding: 0 18px;
+      background-color: rgba(66, 66, 66, .8); // background-color: red;
+    }
+    .cart {
+      float: right;
+    }
+    .tool {
+      float: right;
+      li:last-child {
+        margin-right: @mg-normal;
+      }
+    }
+    .iconfont {
+      font-size: @ft-base;
+    }
+  } // 头部 end
+  // 顶部 start
+  .top {
+    .top-body {
+      position: relative;
+      .w();
+      height: 100px;
+    }
+    .top-logo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0; // 当top&bottom都为0时，margin设为auto可以实现居中
+      // 如果是之前的话会通过margin负边距，或者transform来实现
+      margin: auto 0;
+      width: 56px;
+      height: 54px;
+    }
+    .top-nav {
+      padding: 0 388px 0 232px;
+      line-height: 100px;
+      font-size: @ft-base;
+      ul>li {
+        float: left;
+        padding: 0 @mg-sm;
+        &:hover {
+          color: @orange;
         }
-        ul>li {
-            float: left;
-            color: @ft-header;
-            margin-right: @mg-ml;
+      }
+    }
+    .top-search-box {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      width: 295px;
+      height: 52px;
+    }
+    .search {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ccc;
+    }
+    .search-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 52px;
+      background-color: @white;
+      border: 1px solid #ccc;
+    }
+    .tag1,
+    .tag2 {
+      position: absolute;
+      font-size: @ft-sm;
+      color: @ft-easy;
+      top: 0;
+      bottom: 0;
+      height: 20px;
+      padding: 4px;
+      margin: auto 0;
+      background: @bg-normal;
+      box-sizing: border-box;
+    }
+    .tag1 {
+      right: 132px;
+    }
+    .tag2 {
+      right: 62px;
+    }
+    .tag1:hover,
+    .tag2:hover {
+      color: @white;
+      background-color: @orange;
+      cursor: pointer;
+    }
+    .iconfont {
+      font-weight: bold;
+      color: @ft-line;
+      font-size: 20pxf;
+    }
+  } // 顶部 end
+  // 主体部分 start
+  .main {
+    width: 100%;
+    .slider {
+      position: relative;
+      .w();
+    }
+    .aside {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: @width-base;
+      height: @height-banner;
+      color: @white;
+      padding: 22px 0;
+      background-color: #606061;
+      ul>li {
+        cursor: pointer;
+        line-height: 42px;
+        padding: 0 30px;
+        &:hover {
+          background-color: @orange;
         }
-        .line {
-            color: @ft-line;
-            &:hover {
-                color: @ft-line;
-            }
+      }
+      .iconfont {
+        font-size: 14px;
+        float: right;
+      }
+    }
+    .banner {
+      width: 100%;
+      height: @height-banner;
+      background-color: pink;
+    }
+    .slider-bottom {
+      margin-top: @mg-base;
+    }
+    .square {
+      float: left;
+      width: @width-base;
+      height: @height-square;
+      font-size: @ft-sm;
+      color: @ft-easy;
+      .iconfont {
+        font-size: 25px;
+      }
+      background-color: #5f5750;
+      ul {
+        height: 100%;
+      }
+      li {
+        position: relative;
+        float: left;
+        width: 33.33%;
+        height: 50%;
+        padding: 20px 0;
+        cursor: pointer;
+        &:hover {
+          color: #fff;
         }
-        a:hover {
-            color: @white;
+      }
+      i,
+      span {
+        display: block;
+        text-align: center;
+      }
+      span {
+        margin-top: 6px;
+      }
+    }
+    .slider-bottom-ad {
+      float: right;
+      font-size: 0;
+      img {
+        width: @width-large;
+        height: @height-square;
+        margin-right: @mg-base;
+      }
+      img:last-child {
+        margin-right: 0;
+      }
+    }
+    .flash-pay {
+      .w();
+      margin-top: @mg-lg;
+      .flash-pay-body {
+        margin-left: -@mg-base;
+        .endtime {
+          padding: 60px 32px 44px;
         }
-        .cart-box {
-            padding: 0 18px;
-            background-color: rgba(66, 66, 66, .8); // background-color: red;
+        .meeting-time {
+          height: 48px;
+          color: @red;
+          font-size: @ft-title;
+          text-align: center;
+          font-weight: 400;
         }
-        .cart {
-            float: right;
-        }
-        .tool {
-            float: right;
-            li:last-child {
-                margin-right: @mg-normal;
-            }
-        }
-        .iconfont {
-            font-size: @ft-base;
-        }
-    } // 头部 end
-    // 顶部 start
-    .top {
-        .top-body {
-            position: relative;
-            .w();
-            height: 100px;
-        }
-        .top-logo {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0; // 当top&bottom都为0时，margin设为auto可以实现居中
-            // 如果是之前的话会通过margin负边距，或者transform来实现
-            margin: auto 0;
-            width: 56px;
+        .lightning {
+          text-align: center;
+          height: 54px;
+          width: 100%;
+          img {
             height: 54px;
+            width: auto;
+          }
         }
-        .top-nav {
-            padding: 0 388px 0 232px;
-            line-height: 100px;
-            font-size: @ft-base;
-            ul>li {
-                float: left;
-                padding: 0 @mg-sm;
-                &:hover {
-                    color: @orange;
-                }
-            }
+        .remain-time {
+          margin-top: 38px;
+          height: 46px;
+          text-align: center;
+          color: @ft-easy;
+          font-size: @ft-base;
         }
-        .top-search-box {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto 0;
-            width: 295px;
-            height: 52px;
-        }
-        .search {
-            width: 100%;
-            height: 100%;
-            border: 1px solid #ccc;
-        }
-        .search-icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-            width: 52px;
-            background-color: @white;
-            border: 1px solid #ccc;
-        }
-        .tag1,
-        .tag2 {
-            position: absolute;
-            font-size: @ft-sm;
-            color: @ft-easy;
-            top: 0;
-            bottom: 0;
-            height: 20px;
-            padding: 4px;
-            margin: auto 0;
-            background: @bg-normal;
-            box-sizing: border-box;
-        }
-        .tag1 {
-            right: 132px;
-        }
-        .tag2 {
-            right: 62px;
-        }
-        .tag1:hover,
-        .tag2:hover {
+        .kill-time {
+          span {
+            display: inline-block;
+            width: 46px;
+            height: 46px;
+            text-align: center;
+            line-height: 46px;
+            background-color: #605751;
+            border-radius: 2px;
             color: @white;
-            background-color: @orange;
-            cursor: pointer;
+            font-size: 20px;
+          }
         }
-        .iconfont {
-            font-weight: bold;
-            color: @ft-line;
-            font-size: 20pxf;
+        li {
+          float: left;
+          width: 234px;
+          height: 338px;
+          padding: 0 22px;
+          margin-left: @mg-base;
+          text-align: center;
+          background-color: #fafafa;
         }
-    } // 顶部 end
-    // 主体部分 start
-    .main {
-        width: 100%;
-        .slider {
-            position: relative;
-            .w();
+        img {
+          width: 100%;
+          height: auto;
         }
-        .aside {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: @width-base;
-            height: @height-banner;
-            color: @white;
-            padding: 22px 0;
-            background-color: #606061;
-            ul>li {
-                cursor: pointer;
-                line-height: 42px;
-                padding: 0 30px;
-                &:hover {
-                    background-color: @orange;
-                }
-            }
-            .iconfont {
-                font-size: 14px;
-                float: right;
-            }
+        .flash-pay-body-title {
+          font-size: @mg-base;
+          color: @ft-line;
         }
-        .banner {
-            width: 100%;
-            height: @height-banner;
-            background-color: pink;
+        .flash-pay-body-content {
+          margin-top: 12px;
+          font-size: 13px;
+          color: @ft-easy;
         }
-        .slider-bottom {
-            margin-top: @mg-base;
+        .flash-pay-body-price {
+          margin-top: 20px;
+          font-size: @mg-base;
+          color: @orange;
         }
-        .square {
-            float: left;
-            width: @width-base;
-            height: @height-square;
-            font-size: @ft-sm;
-            color: @ft-easy;
-            .iconfont {
-                font-size: 25px;
-            }
-            background-color: #5f5750;
-            ul {
-                height: 100%;
-            }
-            li {
-                position: relative;
-                float: left;
-                width: 33.33%;
-                height: 50%;
-                padding: 20px 0;
-                cursor: pointer;
-                &:hover {
-                    color: #fff;
-                }
-            }
-            i,
-            span {
-                display: block;
-                text-align: center;
-            }
-            span {
-                margin-top: 6px;
-            }
+        .del {
+          color: @ft-easy;
         }
-        .slider-bottom-ad {
-            float: right;
-            font-size: 0;
-            img {
-                width: @width-large;
-                height: @height-square;
-                margin-right: @mg-base;
-            }
-            img:last-child {
-                margin-right: 0;
-            }
+      }
+    }
+    .bg-gray {
+      background-color: @bg-normal;
+      padding: 76px 0 60px;
+      .phone {
+        .w();
+      }
+      .phone-body {
+        position: relative;
+      }
+      .phone-body-left {
+        float: left;
+        width: @width-base;
+        height: @height-lg;
+      }
+      .phone-body-right {
+        // 通过触发BFC实现
+        // 左边浮动，宽度固定
+        // 右边自适应布局
+        // overflow: hidden;
+        float: left;
+        width: 994px;
+        li {
+          float: left;
+          width: @width-base;
+          height: @height-base;
+          margin-left: @mg-base;
+          padding: 20px 0;
+          text-align: center;
+          background-color: #fff; // 不能写4-n
+          transition: all 0.6s ease;
+          &:hover {
+            transform: translate3d(0, -2px, 0);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+          } // a和b必须是整数，元素的第一个子元素的下标为1
+          // n = 0,1,2,3...
+          &:nth-child(-n+4) {
+            margin-bottom: @mg-base;
+          }
+          img {
+            width: 160px;
+            height: 160px;
+          }
+          p {
+            padding: 0 20px;
+          }
         }
-        .flash-pay {
-            .w();
-            margin-top: @mg-lg;
-            .flash-pay-body {
-                margin-left: -@mg-base;
-                .endtime {
-                    padding: 60px 32px 44px;
-                }
-                .meeting-time {
-                    height: 48px;
-                    color: @red;
-                    font-size: @ft-title;
-                    text-align: center;
-                    font-weight: 400;
-                }
-                .lightning {
-                    text-align: center;
-                    height: 54px;
-                    width: 100%;
-                    img {
-                        height: 54px;
-                        width: auto;
-                    }
-                }
-                .remain-time {
-                    margin-top: 38px;
-                    height: 46px;
-                    text-align: center;
-                    color: @ft-easy;
-                    font-size: @ft-base;
-                }
-                .kill-time {
-                    span {
-                        display: inline-block;
-                        width: 46px;
-                        height: 46px;
-                        text-align: center;
-                        line-height: 46px;
-                        background-color: #605751;
-                        border-radius: 2px;
-                        color: @white;
-                        font-size: 20px;
-                    }
-                }
-                li {
-                    float: left;
-                    width: 234px;
-                    height: 338px;
-                    padding: 0 22px;
-                    margin-left: @mg-base;
-                    text-align: center;
-                    background-color: #fafafa;
-                }
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-                .flash-pay-body-title {
-                    font-size: @mg-base;
-                    color: @ft-line;
-                }
-                .flash-pay-body-content {
-                    margin-top: 12px;
-                    font-size: 13px;
-                    color: @ft-easy;
-                }
-                .flash-pay-body-price {
-                    margin-top: 20px;
-                    font-size: @mg-base;
-                    color: @orange;
-                }
-                .del {
-                    color: @ft-easy;
-                }
-            }
+        .flash-pay-body-title {
+          font-size: @mg-base;
+          color: @ft-line;
         }
-        .bg-gray {
-            background-color: @bg-normal;
-            padding: 76px 0 60px;
-            .phone {
-                .w();
-            }
-            .phone-body {
-                position: relative;
-            }
-            .phone-body-left {
-                float: left;
-                width: @width-base;
-                height: @height-lg;
-            }
-            .phone-body-right {
-                // 通过触发BFC实现
-                // 左边浮动，宽度固定
-                // 右边自适应布局
-                // overflow: hidden;
-                float: left;
-                width: 994px;
-                li {
-                    float: left;
-                    width: @width-base;
-                    height: @height-base;
-                    margin-left: @mg-base;
-                    padding: 20px 0;
-                    text-align: center;
-                    background-color: #fff; // 不能写4-n
-                    // 匹配模式an+b
-                    // a和b必须是整数，元素的第一个子元素的下标为1
-                    // n = 0,1,2,3...
-                    &:nth-child(-n+4) {
-                        margin-bottom: @mg-base;
-                    }
-                    img {
-                        width: 160px;
-                        height: 160px;
-                    }
-                    p {
-                        padding: 0 20px;
-                    }
-                    &:hover {
-                        transform: translateY(-2px);
-                        transition: all 1s linear;
-                        box-shadow: 4px 4px 4px 2px rgba(66, 66, 66, .3);
-                    }
-                }
-                .flash-pay-body-title {
-                    font-size: @mg-base;
-                    color: @ft-line;
-                }
-                .flash-pay-body-content {
-                    margin-top: 12px;
-                    font-size: 13px;
-                    color: @ft-easy;
-                }
-                .flash-pay-body-price {
-                    margin-top: 20px;
-                    font-size: @mg-base;
-                    color: @orange;
-                }
-                .del {
-                    color: @ft-easy;
-                }
-            }
+        .flash-pay-body-content {
+          margin-top: 12px;
+          font-size: 13px;
+          color: @ft-easy;
         }
-        .flash-pay-ad {
-            overflow: hidden;
-            height: 120px;
-            width: 100%;
+        .flash-pay-body-price {
+          margin-top: 20px;
+          font-size: @mg-base;
+          color: @orange;
         }
-    } // 主体部分 end
+        .del {
+          color: @ft-easy;
+        }
+      }
+    }
+    .flash-pay-ad {
+      overflow: hidden;
+      height: 120px;
+      width: 100%;
+    }
+    .parts {
+      .w();
+      margin-top: @mg-lg;
+      background-color: #fff;
+      .parts-body {
+        margin-left: -@mg-base;
+        ul>li {
+          float: left;
+          margin-left: @mg-base;
+          margin-bottom: @mg-base;
+          width: @width-base;
+          height: @height-base;
+          border: 1px solid #000;
+          text-align: center;
+        }
+        .parts-img {
+          display: inline-block;
+          margin-top: 34px;
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  } // 主体部分 end
 }
